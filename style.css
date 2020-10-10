@@ -35,6 +35,7 @@ video{
     width: 100%;
     object-fit: cover;
     background-repeat: repeat;
+    filter: brightness(75%);
 }
 
 .icon-wrapper{
@@ -48,11 +49,13 @@ video{
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
+    position: relative;
 }
 
 a{
     text-decoration: none;
 }
+
 .icon{ 
     border: 3px solid white;
     width: 40px;
@@ -64,22 +67,34 @@ a{
     margin: 3px;
 }
 
+/* HEADER TEXT */
+
 .header-text-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     align-self: flex-start;
+    margin-top: 15%;
 }
+
 .header-text{
-    align-self: flex-start;
     font: normal normal bold 40px/49px Montserrat;
-    letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
 }
 
-.title{
+.name, .portfolio{
+    font: 13px 'Roboto', 'sans-serif';
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: -15px;
+}
+
+.header-title{
     font: normal normal bold 24px/29px Montserrat;
+    color: white;
+    margin-top: -15px;
+}
+
+.name, .header-title, .header-text{
+    font-weight: bold;
 }
 
 .profile-picture{
@@ -92,72 +107,89 @@ a{
     background-position: center;
     background-size: cover;
     margin-bottom: -30px;
+    position: absolute;
+    top: 300px;
 }
 
-.decoration {
-    display: flex;
-    align-items: center;
-}
+
 
 .line{
-    width: 40px;
-    height: 6px;
+    width: 45px;
+    height: 2px;
     background: lightpink;
+    margin-bottom: 5px;
+    display: inline-block;
 }
 
 .circle{
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     background: lightpink;
     border-radius: 50%;
-    margin-left: -3px;
+    display: inline-block;
+    
 }
 
 .intro{
-    font: normal normal normal 17px/29px Montserrat;
+    font: 17px 'Montserrat';
     padding-top: 50px;
+
 }
+
+/* Section styling */
 .portfolio-section{
     padding: 10px 36px 10px 36px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .grey{
     background-color: #F4F4F4;
-    display: flex;
 }
 
 .project-wrapper{
     display: flex;
     flex-direction: column;
 }
-.project-card{
-    text-decoration: none;
-     display: inline-grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  column-gap: 30px;
-  row-gap: 30px;
-}
 
+.project-card{
+    margin-top: 25px;
+}
 
 .section-text-wrapper{
     display: flex;
 }
-.section-header{
+.section-header, .section-header-desktop, .section-header-mobile{
     font-family: "Montserrat";
     opacity: 1;
     text-align: center;
     background-color: pink;
     color: white;
     text-transform: uppercase;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 5px;
+}
+
+.section-header-desktop{
+    display: none;
+}
+
+.section-header-sub{
+    font-family: "Montserrat";
+    opacity: 1;
+    text-align: center;
+    color: pink;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 20px auto;
 }
 
 .featured-text{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.6;
     margin-top: 20px;
     color: black;
@@ -171,17 +203,116 @@ a{
     text-transform: uppercase;
 }
 
+.bold{
+    font-weight: bold;
+}
+
+.featured-header{
+    font: 21px 'Roboto';
+    font-weight: bold;
+    color: black;
+}
+
+.no-margin {
+    margin: 0;
+    line-height: 1.5em;
+}
+
 .tech-skills{
     text-align: center;
-    font: normal normal normal 17px/29px Montserrat;
+    font: 17px 'Montserrat';
     letter-spacing: 0px;
     opacity: 1;
 }
 
-.footer{
-    left: 0;
-    right: 0;
-    bottom: 0;
+.pink{
+    color:pink;
+}
+
+.tech-sign-wrapper { /* The wrapper for the tech-signs */
+    display: flex;
+}
+
+.tech-sign { /* The small pink boxes with tech-words.*/
+    font-family: Roboto;
+    color: #2B2E34;
+    background-color: #FDDFE7;
+    font-size: 12px;
+    padding: 4px 12px;
+    margin: 3px 3px;
+}
+
+.more-project-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.more-projects{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.skills-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.skill{
+    width: 50%;
+}
+
+.skill-header{
+    font: 17px 'Roboto';
+    color: pink;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.skill-text{
+    font: 17px 'Roboto';
+    color: black;
+}
+
+.section-header-desktop{
+    display: none;
+}
+
+.big-icon-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.each-icon{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.big-icon{ 
+    border: 3px solid pink;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+}
+
+.big-icon-image{
+    width: 50%;
+}
+
+.icon-text{
+    font: 11px 'Roboto';
+    color: pink;
+    text-transform: uppercase;
 }
 
 @media (min-width: 668px) {
@@ -189,24 +320,87 @@ a{
         padding: 100px 200px 0 200px;
     }
 
+    .section-header-mobile{
+        display: none;
+    }
+    .section-header-desktop{
+        display: block;
+    }
+
+    .header-text-wrapper{
+        margin-top: 0%;
+    }
+
+    .portfolio, .name{
+        font-size: 28px;
+        margin-bottom: 0px;
+    }
+
+    .header-text{
+        font-size: 82px;
+    }
+
     .profile-picture{
         width: 333px;
         height: 333px;
+        top: 110px;
     }
+    
     
     .project-wrapper{
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    .featured-project{
-        margin: 15px;
+    .featured-project {
+        width: 50%;
     }
 
+    .each-project{
+        width: 100%;
+    }
     
     .portfolio-section{
-        height: 300px;
         padding: 10px 200px 10px 200px;
         display: flex;
-        flex-direction: column;
+    }
+
+    .section-header, .section-header-desktop{
+        font-size: 48px;
+    }
+
+    .section-header-sub{
+    font-size: 38px;
+    }
+
+    .project-card{
+     padding: 10px;   
+    }
+
+    .skills-wrapper{
+        justify-content: flex-start;
+        text-align: center;
+    }
+    .skill{
+        width: 33%;
+    }
+
+    .skill-header{
+        font-size: 25px;
+    }
+    
+    .skill-text{
+        font-size: 25px;
+    }
+
+    .big-icon{
+        width: 160px;
+        height: 160px;
+    }
+
+    .icon-text{
+        font-size: 25px;
     }
 }
+
+
