@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -67,7 +68,7 @@ a {
     margin: 3px;
 }
 
-/* HEADER TEXT */
+/* Header text */
 
 .header-text-wrapper {
     align-self: flex-start;
@@ -158,6 +159,31 @@ a {
     display: flex;
 }
 
+/* Text on image section */
+.image-text-container {
+    position: relative;
+    text-align: center;
+}
+
+.img{
+    filter: opacity(80%);
+}
+
+.img:hover{
+    filter: opacity(100%);
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: bold 28px 'Montserrat', sans-serif;
+    color: pink;
+    text-transform: uppercase;
+  }
+
+/* Different header text */ 
 .section-header, .section-header-desktop, .section-header-mobile {
     font-family: "Montserrat", sans-serif;
     opacity: 1;
@@ -228,13 +254,11 @@ a {
 }
 
 .tech-sign-wrapper {
-    /* The wrapper for the tech-signs */
     display: flex;
 }
 
 .tech-sign {
-    /* The small pink boxes with tech-words.*/
-    font-family: Roboto;
+    font-family: 'Roboto';
     color: #2B2E34;
     background-color: #FDDFE7;
     font-size: 12px;
@@ -253,6 +277,8 @@ a {
     flex-direction: column;
     align-items: flex-start;
 }
+
+/* Skill section */
 
 .skills-wrapper {
     display: flex;
@@ -279,6 +305,8 @@ a {
 .section-header-desktop {
     display: none;
 }
+
+/* For more section */
 
 .big-icon-wrapper {
     display: flex;
@@ -315,6 +343,7 @@ a {
     text-transform: uppercase;
 }
 
+/* Footer section */
 footer {
     background-color: pink;
     color: white;
@@ -346,30 +375,8 @@ footer p {
     font-size: 17px;
 }
   
-.image-text-container {
-    position: relative;
-    text-align: center;
-}
-  .img{
-      filter: opacity(80%);
-    
-  }
-
-.img:hover{
-    filter: opacity(100%);
-}
-
-  .image-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font: bold 28px 'Montserrat', sans-serif;
-    color: pink;
-    text-transform: uppercase;
-  }
-
 @media (min-width: 800px) {
+
     header {
         padding: 90px 80px 0 80px;
     }
@@ -390,6 +397,7 @@ footer p {
     }
     
 @media (min-width: 1025px) {
+
     header {
         padding: 100px 100px 0 100px;
     }
@@ -416,9 +424,9 @@ footer p {
         font-size: 82px;
     }
     .profile-picture {
-        width: 333px;
-        height: 333px;
-        top: 110px;
+        width: 280px;
+        height: 280px;
+        top: 170px;
         right: 0;
     }
 
@@ -468,15 +476,7 @@ footer p {
     .icon-text {
         font-size: 25px;
     }
-    footer h3 {
-        font-weight: bold;
-        font-size: 38px;
-    }
-    
-    footer p {
-        margin: 10px;
-        font-size: 30px;
-    }
+
 
     .project-card:hover{
         box-shadow: 0.5px 0.5px 0.5px 1px pink;
@@ -485,5 +485,15 @@ footer p {
     .each-icon{
         margin-top: 30px;
         }
+
+    footer h3 {
+        font-weight: bold;
+        font-size: 38px;
+    }
+        
+    footer p {
+        margin: 10px;
+        font-size: 30px;
+     }
     }
 }
