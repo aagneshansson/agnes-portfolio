@@ -410,7 +410,7 @@ footer p {
     }
     .portfolio, .name {
         font-size: 28px;
-        margin-bottom: 0px;
+        margin-bottom: -10px;
     }
     .header-text {
         font-size: 82px;
