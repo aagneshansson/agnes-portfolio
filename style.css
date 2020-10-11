@@ -71,7 +71,7 @@ a {
 
 .header-text-wrapper {
     align-self: flex-start;
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 .header-text {
@@ -391,7 +391,7 @@ footer p {
     
 @media (min-width: 1025px) {
     header {
-        padding: 100px 150px 0 150px;
+        padding: 100px 100px 0 100px;
     }
     .section-header-mobile {
         display: none;
