@@ -159,7 +159,7 @@ a {
 }
 
 .section-header, .section-header-desktop, .section-header-mobile {
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     opacity: 1;
     text-align: center;
     background-color: pink;
@@ -167,7 +167,7 @@ a {
     text-transform: uppercase;
     width: fit-content;
     margin: 20px auto;
-    padding: 5px;
+    padding: 0px 10px;
 }
 
 .section-header-desktop {
@@ -345,8 +345,51 @@ footer p {
     margin: 10px;
     font-size: 17px;
 }
+  
+.image-text-container {
+    position: relative;
+    text-align: center;
+}
+  .img{
+      filter: opacity(80%);
+    
+  }
+
+.img:hover{
+    filter: opacity(100%);
+}
+
+  .image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: bold 28px 'Montserrat', sans-serif;
+    color: pink;
+    text-transform: uppercase;
+  }
 
 @media (min-width: 800px) {
+    header {
+        padding: 90px 80px 0 80px;
+    }
+    
+    .profile-picture {
+        width: 250px;
+        height: 250px;
+        top: 150px;
+    }
+
+    .project-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .featured-project {
+        width: 50%;
+    }
+    
+@media (min-width: 1025px) {
     header {
         padding: 100px 200px 0 200px;
     }
@@ -356,6 +399,12 @@ footer p {
     .section-header-desktop {
         display: block;
     }
+
+    .section-header, .section-header-desktop, .section-header-sub{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
     .header-text-wrapper {
         margin-top: 0%;
     }
@@ -371,6 +420,10 @@ footer p {
         height: 333px;
         top: 110px;
     }
+
+    .intro{
+        margin-top: 50px;
+    }
     .project-wrapper {
         flex-direction: row;
         flex-wrap: wrap;
@@ -382,7 +435,7 @@ footer p {
         width: 100%;
     }
     .portfolio-section {
-        padding: 10px 400px 10px 400px;
+        padding: 10px 255px 10px 255px;
         display: flex;
     }
     .section-header, .section-header-desktop {
@@ -422,5 +475,14 @@ footer p {
     footer p {
         margin: 10px;
         font-size: 30px;
+    }
+
+    .project-card:hover{
+        box-shadow: 0.5px 0.5px 0.5px 1px pink;
+    }
+
+    .each-icon{
+        margin-top: 30px;
+        }
     }
 }
